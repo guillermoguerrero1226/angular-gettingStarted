@@ -21,7 +21,7 @@ export class ProductService{
 
     getProducts():Observable<IProduct[]>{
         return this._http.get<IProduct[]>(this._productUrl)
-            .do(data=>console.log('All: ' +JSON.stringify(data)))
+            .do(data=>JSON.stringify(data))
             .catch(this.handleError);
     }
 
